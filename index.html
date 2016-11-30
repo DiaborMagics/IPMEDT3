@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio Ricky Jansen</title>
+    <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/MenuStyle.css" />
+      <script type="text/javascript" src="assets/js/jquery-3.1.1.js"></script>
+      <script type="text/javascript" src="assets/js/main.js"></script>
+  </head>
+
+  <body>
+  <div id="mySidenav" class="sidenav" >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+      <a href="#introductionPage">Introductie</a>
+      <a href="#iDrivePage">iDrive</a>
+      <a href="#lunchroomPage">Lunchroom Bakker</a>
+      <a href="#augmentedPage">Augmented Albert</a>
+      <a href="#pechaKuchaPage">Pecha Kucha</a>
+      <a href="#augmentedPage2">Review 1</a>
+      <a href="#lunchroomPage2">Review 2</a>
+</div>
+	<div id="Button" class="Button">
+		<span onclick="openMenu()"> <img id="menu" src="assets/image/menu.svg" alt="Menu"> </span> <br /><br />
+	</div>
+
+  <!--Introduction Page-->
+  <div id="introductionPage" class="page">
+      <div id="introTitleWrapper" class="titleWrapper">
+          <h1>Portfolio Ricky Jansen</h1>
+          <h2>Student 1089491 aan Hogeschool Leiden</h2>
+      </div>
+      <div id="introContentWrapper" class="contentWrapper">
+          <div class="leftDiv">
+	        <span class="span">
+              <img class="image" src="assets/image/tuin.jpg" alt="Portretfoto">
+	        </span>
+          </div>
+          <div class="rightDiv">
+              <span class="textSpan">
+                  <p id="introText" class="textRight">
+                      Mijn naam is Ricky Jansen. <br> Ik ben 23 jaar oud, een student aan Hogeschool Leiden en volg op het moment tweedejaars onderwijs in 	   de richting van Media Technologie. Deze website toont al mijn ontwerpen en projecten vanaf het tweede jaar en zal een goed beeld geven 	   van waar mijn kwaliteiten liggen.
+                  </p>
+              </span>
+          </div>
+      </div>
+  </div>
+
+  <!--iDrive Page-->
+  <div id="iDrivePage" class="page">
+      <div class="titleWrapper">
+          <h2>iDrive Opdracht</h2>
+      </div>
+      <div class="contentWrapper">
+          <div class="rightDiv">
+	        <span class="span">
+              <img class="image" src="assets/image/iDrive.png" alt="Reclame Opdracht iDrive">
+	        </span>
+          </div>
+          <div class="leftDiv">
+              <span class="textSpan">
+                  <p id="iDriveText" class="textLeft" onclick="changeiDriveText()">
+                      De opdracht voor de Apple iDrive was om een advertentie te maken in de huidige stijl van Apple. De advertentie moest het Apple logo bevatten, de lanceerdatum van 1 juli 2017 en de tekst: “Apple. iDrive. Ride into the future.”. De advertentie moest 1000 bij 600 pixels groot zijn en in JPG formaat worden opgeslagen.<br><br>
+                      Het ging hier om een zelfstandig rijdende auto. Natuurlijk is dit heel uniek, maar de huidige stijl van Apple, af te leiden van de advertentie van de iPhone 7, is minimalistisch. Minimalistisch niet alleen in de zin van dat er weinig rompslomp op de advertentie staat, maar ook in de zin van dat de advertentie zelf weinig zegt over de functionaliteit van het product. Dit maakt de persoon die naar de advertentie kijkt nieuwsgierig en geeft deze persoon sneller het idee dat hij of zij onderzoek moet doen naar het product, dan wel het product moet hebben.<br>(1/5)
+                  </p>
+              </span>
+          </div>
+      </div>
+  </div>
+
+  <!--Lunchroom Page-->
+  <div id="lunchroomPage" class="page">
+      <div class="titleWrapper">
+          <h2>Lunchroom Opdracht</h2>
+      </div>
+      <div class="contentWrapper">
+          <div class="leftDiv">
+	        <span class="span">
+              <img class="image" src="assets/image/lunchroom.png" alt="Lunchroom Opdracht">
+	        </span>
+          </div>
+          <div class="rightDiv">
+              <span class="textSpan">
+                  <p id="bakkerText" class="textRight" onclick="changeBakkerText()">
+                      De opdracht voor Lunchroom Bakker was om het welkomstscherm van een Android app voor dit bedrijf te maken. Lunchroom Bakker bezorgt al lunches sinds 1910 en vanaf dit jaar willen zij deze lunches (kleine, grote en enorme trek) ook via deze app gaan verkopen. <br>
+                      Het welkomstscherm moest een menu knop, een zoekmogelijkheid en een overzicht van de verschillende lunches bevatten. Compleet met bijbehorende prijzen en een bestelknop. Het schermontwerp moest in PNG formaat worden opgeslagen, met een resolutie van 414 bij 736 pixels en het moest opgebouwd worden volgens de Google Material Design Guidelines.<br><br>
+                      Dit keer was er niet zomaar een voorbeeld om de stijl vanaf te leiden, zoals dit bij de iDrive het geval was. De Lunchroom Bakker van deze opdracht heeft niet pas geleden nog een mooie advertentie geplaatst waar ik lering uit kon trekken. Hierdoor ging ik mij afvragen wat ik bij een lunchroom vond passen. Wat stelde ik me voor bij de kleuren van de applicatie? En wat stelde ik me voor bij de drie verkrijgbare lunches?<br>(1/4)
+                  </p>
+              </span>
+          </div>
+      </div>
+  </div>
+
+  <!--Augmented Albert Page-->
+  <div id="augmentedPage" class="page">
+      <div class="titleWrapper">
+          <h2>Augmented Albert Opdracht</h2>
+      </div>
+      <div class="contentWrapper">
+          <div class="rightDiv">
+	        <span class="span">
+              <img class="image" src="assets/image/augmentedAlbert.png" alt="Augmented Albert Opdracht">
+	        </span>
+          </div>
+          <div class="leftDiv">
+              <span class="textSpan">
+                  <p id="albertText" class="textLeft" onclick="changeAlbertText()">
+                      De opdracht voor Augmented Albert was om een Augmented Reality applicatie in actie te laten zien. De applicatie was bedoeld voor Albert Heijn als aanvulling op de zelfscanner en moest als extra laag over het scherm van een tablet de klant wegwijs maken en productinformatie verschaffen.<br>
+                      Het ontwerp moest in JPG formaat worden opgeslagen met een resolutie van 1024 bij 720 pixels en de huidige stijl van Albert Heijn moest erin worden aangehouden.<br><br>
+                      Het eerste wat mijn hoofd binnen kwam vliegen toen ik de opdracht las was de “extra laag” over het scherm. Ik zag direct voor me dat ik met deze applicatie voor een schap stond en dat ik een product aan kon tikken. De andere producten in het schap zouden dan onder een wit filter komen te liggen, waardoor mijn geselecteerde product extra goed op zou vallen en hierover zou ik dan informatie krijgen. <br>
+                      Dit idee ben ik direct gaan uitwerken en is er ook de hele tijd in gebleven. De rest heeft wel veranderingen ondergaan.<br>(1/4)
+                  </p>
+              </span>
+          </div>
+      </div>
+  </div>
+
+  <!--Pecha Kucha Page-->
+  <div id="pechaKuchaPage" class="page">
+      <div class="titleWrapper">
+          <h2>Pecha Kucha Opdracht</h2>
+      </div>
+      <div class="contentWrapper">
+          <div class="leftDiv">
+              <span class="span">
+                  <img id="slide" class="image" src="assets/image/pechaKuchaNicolasFelton/slide1.png" alt="Pecha Kucha Opdracht">
+                  <img class="arrowLeft" src="assets/image/left.svg" alt="Left Arrow" onclick="changeImageLeft()">
+                  <img class="arrowRight" src="assets/image/right.svg" alt="Right Arrow" onclick="changeImageRight()">
+              </span>
+          </div>
+          <div class="rightDiv">
+              <span class="textSpan">
+                  <p id="pechaText" class="textRight" onclick="changePechaText()">
+                      Deze Pecha Kucha gaat over Nicholas Felton. Nicholas Felton is een 37-jarige, Amerikaanse ontwerper die vooral van data houdt. Hoe meer, hoe beter. Hij specialiseert zich in het samenvoegen van allerlei data voor bedrijven in rapporten die vooral grafieken, kaarten en andere visuele elementen bevatten. <br><br>
+                      Felton heeft bij Facebook als één van de hoofdontwerpers van het product design team grote invloed gehad op het ontwerp van de Facebook Tijdlijn. Dit is hoe veel mensen hem ook onbewust kennen en het laat goed zien hoe hij met data omgaat: zoveel mogelijk verzamelen en dit in overzichten weergeven.<br>(1/3)
+                  </p>
+              </span>
+          </div>
+      </div>
+  </div>
+
+  <!--Peer review Augmented Albert John Page-->
+  <div id="augmentedPage2" class="page">
+      <div class="titleWrapper">
+          <h2>Peer-review 1: Augmented Albert John Baaij</h2>
+      </div>
+      <div class="contentWrapper">
+          <div class="rightDiv">
+	        <span class="span">
+              <img class="image" src="assets/image/appie1.png" alt="Augmented Albert Opdracht John Baaij">
+	        </span>
+          </div>
+          <div class="leftDiv">
+              <span class="textSpan">
+                  <p id="albert2Text" class="textLeft" onclick="changeAlbert2Text()">
+                      Het hiernaast staande ontwerp is de &#34;Augmented Albert&#34; opdracht van John Baaij. Iets dat mij direct opvalt is dat er geen Albert Heijn logo op het ontwerp staat. Dit was volgens de opdracht niet letterlijk verplicht, alleen de stijl van de Albert Heijn was verplicht. Toch vind ik het logo van de Albert Heijn eigenlijk onmisbaar in een dergelijk ontwerp en dus zou ik als tip meegeven om deze er toch in te verwerken.<br><br>
+                      Dan komen we direct bij het &#34;verplichte&#34; onderdeel van de opdracht: de stijl van de Albert Heijn. In mijn opinie is deze goed toegepast; de tekst is strak en netjes, er is gebruik gemaakt van zowel wit als blauw en we zien een mooi pad met schappen; dit laatste hoort niet bij de stijl van de Albert Heijn in de zin van kleur, vormgeving en lettertype maar is toch zeker een onmisbaar gedeelte van elke Albert Heijn winkel. Aangezien het hier om een applicatie gaat dat de weg door de winkel moet wijzen, vind ik dat het gebruik van een pad goed is gekozen.<br>(1/4)
+                  </p>
+              </span>
+          </div>
+      </div>
+  </div>
+
+  <!--Peer review 2; Alex lunchroom-->
+  <div id="lunchroomPage2" class="page">
+      <div class="titleWrapper">
+          <h2>Peer-review 2: Lunchroom Bakker Alex Westendorp</h2>
+      </div>
+      <div class="contentWrapper">
+          <div class="leftDiv">
+	        <span class="span">
+              <img class="image" src="assets/image/lunchroom2.png" alt="Lunchroom Opdracht Alex Westendorp">
+	        </span>
+          </div>
+          <div class="rightDiv">
+              <span class="textSpan">
+                  <p id="bakkerText2" class="textRight" onclick="changeBakkerText2()">
+                      Het hiernaast staande ontwerp is de “Lunchroom Bakker” opdracht van Alex Westendorp. Het design ziet er mooi strak uit; dit is direct te zien. De bedoeling was om de Google Material Design Guidelines aan te houden en dat is hier goed gelukt.<br><br>
+                      Het gebruik van rood op wit vind ik mooi. Er is gebruik gemaakt van een winkelwagentje in plaats van één of meerdere losse bestelknoppen, wat mij ook erg aan staat. Hiermee kan gemakkelijk één iemand voor meerdere personen bestellen. <br><br>
+                      Ook vind ik het mooi dat er drie puntjes rechts bovenaan staan. Deze puntjes geven denk ik de instellingen aan; hiermee zie ik voor me dat bijvoorbeeld de taal ingesteld zou kunnen worden, wat de app direct voor meer klanten toegankelijk maakt.<br>(1/3)
+                  </p>
+              </span>
+          </div>
+      </div>
+  </div>
+  </body>
+  <script>
+  
+/* set 250 */
+function openMenu() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* set 0 */
+function closeMenu() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</html>

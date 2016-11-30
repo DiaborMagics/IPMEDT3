@@ -1,0 +1,91 @@
+a
+{
+  font-family: "OpenSans-Semibold", sans-serif;
+}
+
+#menu
+{
+    height:60px;
+    width:60px;
+}
+
+.Button
+{
+	margin:20px;
+	float:left;
+	z-index: 5;
+	position: fixed;
+    opacity: 0.5;
+    filter:alpha(opacity=50);
+}
+.Button:hover
+{
+    cursor: pointer; cursor: hand;
+    opacity: 1.0;
+    filter:alpha(opacity=100);
+}
+
+/* The side navigation menu */
+.sidenav
+{
+    height: 100%; /* 100% Full-height */
+    width: 0; 
+    position: fixed; 
+    z-index: 6;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+}
+
+/* The navigation menu links */
+.sidenav a
+{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: grey;
+    display: block;
+    transition: 0.5s
+}
+
+/* color change */
+.sidenav a:hover, .offcanvas a:focus
+{
+    color: white;
+}
+
+/* close button style  */
+.sidenav .closebtn
+{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* pushed naar rechts */
+#main
+{
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* Kleine schermen */
+@media screen and (max-height: 450px)
+{
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 550px)
+{
+    #menu
+    {
+        width:36px;
+        height:36px;
+    }
+}
