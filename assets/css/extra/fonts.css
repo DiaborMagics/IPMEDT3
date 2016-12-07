@@ -1,0 +1,26 @@
+@font-face {
+   font-family:OpenSans-Semibold;
+   src: url('fonts/OpenSans-Semibold.ttf');
+}
+
+@font-face {
+   font-family:OpenSans-Regular;
+   src: url('fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family:opensans-medium
+}
+
+@font-face {
+   font-family:HANNA;
+   src: url('fonts/HANNA.ttf');
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/Icons.woff');
+
+}
