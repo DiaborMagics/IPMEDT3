@@ -1,5 +1,5 @@
 a{
-    font-family: "OpenSans-Semibold", sans-serif;
+    font-family: "Roboto Bold", sans-serif;
 }
 
 
@@ -21,30 +21,50 @@ a{
     width: 0;
     position: fixed;
     z-index: 1001;
-    top: 0;
+    margin-top:72px;
     left: 0;
     /* Blue 700 (van Indigo 900)*/
-    background-color: #1976d2;
+    /*background-color: #1976d2;*/
+    background-color: #ffffff; /*VOOR DESKTOP VERSIE*/
     overflow-x: hidden;
-    padding-top: 60px;
+    padding-top: 16px;
     transition: 0.5s;
+    border-style:solid;
+    border-width:1px;
+    border-color:lightgray;
 }
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 16px 8px 16px 32px;
     text-decoration: none;
-    font-size: 25px;
-    color: #ffffff;
+    font-size: 16px;
+    /*color: #ffffff;*/
+    color: #000000; /*voor DESKTOP*/
     display: block;
-    transition: 0.5s
+    transition: 0.5s;
 }
 
-/* color change */
-.sidenav a:hover, .offcanvas a:focus{
-    /*Amber 300*/
-    color: #ffd54f;
+#navIntroductionPage
+{
+    color:#d50000;
 }
+
+.sidenav a:active {
+    color:#d50000;
+    background-color:#DCDCDC;
+}
+
+.sidenav a.huidig {
+    background:#d50000;
+    color:lightgray;
+}
+
+/*!* color change *!*/
+/*.sidenav a:hover, .offcanvas a:focus{*/
+    /*!*Amber 300 - #ffd54f*!*/
+    /*color: #d50000;*/
+/*}*/
 
 /* close button style  */
 .sidenav .closebtn {

@@ -11,26 +11,26 @@
     <script type="text/javascript" src="assets/js/main.js"></script>
 </head>
 
-<body>
+<div id="logoHolder">
+    <img id=pokemonLogo src="assets/image/pokemonLogoBlackWhite.png" alt="pokemonLogo"/>
+</div>
+
 <div id="mySidenav" class="sidenav" >
-    <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
-    <a href="#introductionPage">Introductie</a>
-    <a href="#pokemonPage">Pokémon</a>
-    <a href="#VRpage">VR</a>
+    <!--<a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>-->
+    <a href="#introductionPage" id="navIntroductionPage" onclick="highlightIntro()">Introductie</a>
+    <a href="#pokemonPage" id="navPokemonPage" onclick="highlightPokemon()">Pokémon</a>
+    <a href="VR/index.html" id="navVRpage" target="_blank" onclick="highlightVR()">VR</a>
 </div>
-<div id="Button" class="Button">
-    <span onclick="openMenu()"> <img src="assets/image/greatballMenu.png" alt="Menu" style="width:24px;height:24px;"> </span> <br /><br />
-</div>
+<!--<div id="Button" class="Button">-->
+    <!--<span onclick="openMenu()"> <img src="assets/image/greatballMenu.png" alt="Menu" style="width:24px;height:24px;"> </span> <br /><br />-->
+<!--</div>-->
 
 <!--Introduction Page-->
 <div id="introductionPage" class="page">
     <div class="toolbar">
         <!--<p id = "pokemonTitle">Pokémon</p>-->
-        <img id=pokemonLogo src="assets/image/pokemonLogo.png" alt="pokemonLogo"/>
     </div>
-    <div class="exampleCard">
-        <p> "Example Card" </p>
-    </div>
+    <p>Intro Hier...</p>
 </div>
 
 <!--Pokémon Page-->
@@ -40,8 +40,8 @@
     <!--<img id="pokemonLogo" src="assets/image/pokemonLogo.png" alt="pokemonLogo"/>-->
     <!--</div>-->
     <p>Pokémon Hier...</p>
-    <div class="exampleCard">
-        <p> "Example Card" </p>
+    <div class="card">
+        <p> "In deze cards komen Pokémon..." </p>
     </div>
 </div>
 
@@ -52,9 +52,6 @@
         <!--<img id="pokemonLogo" src="assets/image/pokemonLogo.png" alt="pokemonLogo"/>-->
     <!--</div>-->
     <p>VR Hier...</p>
-    <div class="exampleCard">
-        <p> "Example Card" </p>
-    </div>
 </div>
 
 </body>
@@ -63,12 +60,14 @@
 
     /* set 250 */
     function openMenu() {
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenav").style.width = "248px";
     }
 
-    /* set 0 */
-    function closeMenu() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
+//    /* set 0 */
+//    function closeMenu() {
+//        document.getElementById("mySidenav").style.width = "0";
+//    }
+    //openMenu(); hier aanroepen voor DESKTOP VERSIE
+    openMenu();
 </script>
 </html>
