@@ -3,32 +3,37 @@
 <head>
     <title>Pokémon Simplistic</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/extra/fonts.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/extra/MenuStyle.css" />
+    <link rel="stylesheet" media="screen and (min-device-width: 801px)"type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" media="screen and (max-device-width: 800px)" type="text/css" href="assets/css/style_mobile.css">
+    <link rel="stylesheet" media="screen and (min-device-width: 801px)" type="text/css" href="assets/css/menuStyle.css" />
+    <link rel="stylesheet" media="screen and (max-device-width: 800px)" type="text/css" href="assets/css/menuStyle_mobile.css" />
     <link rel="icon" href="assets/image/favicon.png">
     <script type="text/javascript" src="assets/js/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script id="mainJava" type="text/javascript" src="assets/js/main.js"></script>
 </head>
+
+<body>
+
+<img id="filter" src="assets/image/filter.png" alt = "filter"/>
 
 <div id="logoHolder">
     <img id=pokemonLogo src="assets/image/pokemonLogoBlackWhite.png" alt="pokemonLogo"/>
 </div>
 
 <div id="mySidenav" class="sidenav" >
-    <!--<a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>-->
-    <a href="#introductionPage" id="navIntroductionPage" onclick="highlightIntro()">Introductie</a>
-    <a href="#pokemonPage" id="navPokemonPage" onclick="highlightPokemon()">Pokémon</a>
-    <a href="VR/index.html" id="navVRpage" target="_blank" onclick="highlightVR()">VR</a>
+    <a href="#introductionPage" id="navIntroductionPage" onclick="highlightIntro(), closeMenu()">Introductie</a>
+    <a href="#pokemonPage" id="navPokemonPage" onclick="highlightPokemon(), closeMenu()"  >Pokémon</a>
+    <a href="VR/index.html" id="navVRpage" target="_blank" onclick="highlightVR(), closeMenu()" >VR</a>
 </div>
-<!--<div id="Button" class="Button">-->
-    <!--<span onclick="openMenu()"> <img src="assets/image/greatballMenu.png" alt="Menu" style="width:24px;height:24px;"> </span> <br /><br />-->
-<!--</div>-->
+<div id="button" class="button">
+    <span onclick="openMenu()"> <img src="assets/image/hamburger.png" alt="Menu" style="width:24px;height:24px;"> </span> <br /><br />
+</div>
 
 <!--Introduction Page-->
 <div id="introductionPage" class="page">
     <div class="toolbar">
-        <!--<p id = "pokemonTitle">Pokémon</p>-->
+        <p id = "pokemonTitle">Pokémon</p>
     </div>
     <p>Intro Hier...</p>
 </div>
@@ -39,9 +44,18 @@
     <!--<p id = "pokemonTitle">Pokémon</p>-->
     <!--<img id="pokemonLogo" src="assets/image/pokemonLogo.png" alt="pokemonLogo"/>-->
     <!--</div>-->
-    <p>Pokémon Hier...</p>
-    <div class="card">
-        <p> "In deze cards komen Pokémon..." </p>
+    <div id = "typhlosionCard" class="cardTop">
+        <img class="pokeImage" alt="Typhlosion" src="assets/image/typhlosion.png" onmouseover="this.src='assets/image/typhlosionHover.png'" onmouseout="this.src='assets/image/typhlosion.png'"/>
+    </div>
+    <div class="cardMiddle">
+        <p>dit is nr 1</p>
+    </div>
+    <div id = "lugiaCard" class="cardBottom">
+        <img class="pokeImage" alt="Lugia" src="assets/image/lugia.png" onmouseover="this.src='assets/image/lugiaHover.png'" onmouseout="this.src='assets/image/lugia.png'"/>
+    </div>
+    <div class="cardMiddle2">
+        <p>Dit is nr 2</p>
+
     </div>
 </div>
 
@@ -56,18 +70,4 @@
 
 </body>
 
-<script>
-
-    /* set 250 */
-    function openMenu() {
-        document.getElementById("mySidenav").style.width = "248px";
-    }
-
-//    /* set 0 */
-//    function closeMenu() {
-//        document.getElementById("mySidenav").style.width = "0";
-//    }
-    //openMenu(); hier aanroepen voor DESKTOP VERSIE
-    openMenu();
-</script>
 </html>

@@ -8,16 +8,15 @@ body
 {
     display:none;
     position:absolute;
-    width:100%;
-    height:100%;
+    width:1000%;
+    height:1000%;
     z-index:999;
 }
 
 .page
 {
-    margin-left:13%;
     /*width: 100%; voor Desktop was het eerst dittum*/
-    width: 87%;
+    width: 100vw;
     height:100vh;
     /*background-attachment: fixed;
     background-position: center;
@@ -35,7 +34,7 @@ body
 p
 {
     margin-top:98px;
-    font-family:Roboto Regular;
+    font-family:"Roboto Regular";
     text-align:left;
     margin-left:56px;
 }
@@ -59,11 +58,7 @@ p
 
 #logoHolder
 {
-    position:fixed;
-    background-color: #ffffff;
-    height:72px;
-    width:250px;
-    float:left;
+    display:none;
 }
 
 
@@ -71,8 +66,8 @@ p
 {
     /*Red A700*/
     background-color: #d50000;
-    height:72px;
-    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height:56px;
+//box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.22);
     text-align: center;
     position: fixed;
@@ -81,64 +76,20 @@ p
 
 #pokemonTitle
 {
-    display:none;
+font-size:16px;
+margin-top:16px;
 }
 
 #pokemonLogo
 {
-    max-height:24px;
-    width:auto;
-    float:left;
-    margin-left: 32px;
-    margin-top:24px;
+    display:none;
 }
 
-.cardTop
+.card
 {
-    float:left;
-    margin-top: 112px;
+    margin-top: 72px;
     margin-left:56px;
-    height:auto;
-    width: 9%;
+    width: 250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-}
-
-.cardMiddle
-{
-    float:left;
-    margin-top: 18.5%;
-    margin-left: -9%;
-    height:20%;
-    width: 93%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-}
-
-.cardBottom
-{
-    float:left;
-    margin-top: 33%;
-    margin-left: -93%;
-    height:auto;
-    width: 9%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-}
-
-.cardMiddle2
-{
-    float:left;
-    margin-top: 45%;
-    margin-left: -93%;
-    height:20%;
-    width: 93%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-}
-
-.pokeImage
-{
-    width:100%;
-    height:auto;
 }

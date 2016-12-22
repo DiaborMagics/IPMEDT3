@@ -1,0 +1,84 @@
+a{
+    font-family: "Roboto Bold", sans-serif;
+}
+
+
+.button{
+    height:24px;
+    margin-top:16px;
+    margin-left:16px;
+    float:left;
+    z-index: 1000;
+    position: fixed;
+}
+.button:hover{
+    cursor: pointer; cursor: hand;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0;
+    position: fixed;
+    z-index: 1005;
+    left: 0;
+    /* Blue 700 (van Indigo 900)*/
+    /*background-color: #1976d2;*/
+    background-color: #ffffff; /*VOOR DESKTOP VERSIE*/
+    overflow-x: hidden;
+    padding-top: 16px;
+    transition: 0.5s;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 16px 8px 16px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    /*color: #ffffff;*/
+    color: #000000; /*voor DESKTOP*/
+    display: block;
+    transition: 0.5s;
+}
+
+#navIntroductionPage
+{
+    color:#d50000;
+}
+
+.sidenav a:active {
+    color:#d50000;
+    background-color:#DCDCDC;
+}
+
+.sidenav a.huidig {
+    background:#d50000;
+    color:lightgray;
+}
+
+/*!* color change *!*/
+/*.sidenav a:hover, .offcanvas a:focus{*/
+    /*!*Amber 300 - #ffd54f*!*/
+    /*color: #d50000;*/
+/*}*/
+
+/* close button style  */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* pushed naar rechts */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/*!* Kleine schermen *!*/
+/*@media screen and (max-height: 450px) {*/
+    /*.sidenav {padding-top: 15px;}*/
+    /*.sidenav a {font-size: 18px;}*/
+/*}*/
