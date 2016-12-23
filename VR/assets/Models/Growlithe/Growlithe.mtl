@@ -1,0 +1,44 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.187496374)
+
+newmtl BodyA
+Kd 0.588 0.588 0.588
+Ka 0.588 0.588 0.588
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 2
+illum 2
+map_Kd Images\pm0058_00_BodyA1.png
+
+newmtl BodyBBuffronVco
+Kd 0.588 0.588 0.588
+Ka 0.588 0.588 0.588
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 2
+illum 2
+map_Kd Images\pm0058_00_BodyB1.png
+
+newmtl Eye
+Kd 0.588 0.588 0.588
+Ka 0.588 0.588 0.588
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 2
+illum 2
+map_Kd Images\pm0058_00_Eye1.png
+
+newmtl LIris
+Kd 0.588 0.588 0.588
+Ka 0.588 0.588 0.588
+Ks 0 0 0
+Ke 0 0 0
+d 1
+Ns 2
+illum 2
+map_Kd Images\pm0058_00_Iris1.png
+map_d Images\pm0058_00_Iris1.png
+

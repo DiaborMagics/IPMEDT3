@@ -4,11 +4,20 @@ body
     padding: 0;
 }
 
+#filter
+{
+    display:none;
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:999;
+}
+
 .page
 {
-    margin-left:250px;
+    margin-left:13%;
     /*width: 100%; voor Desktop was het eerst dittum*/
-    width: 100vh;
+    width: 87%;
     height:100vh;
     /*background-attachment: fixed;
     background-position: center;
@@ -26,7 +35,7 @@ body
 p
 {
     margin-top:98px;
-    font-family:OpenSans-Semibold;
+    font-family:Roboto Regular;
     text-align:left;
     margin-left:56px;
 }
@@ -70,11 +79,10 @@ p
     width:100%;
 }
 
-/*#pokemonTitle*/
-/*{*/
-    /*font-size:10.80pt;*/
-    /*margin-top:16px;*/
-/*}*/
+#pokemonTitle
+{
+    display:none;
+}
 
 #pokemonLogo
 {
@@ -85,11 +93,52 @@ p
     margin-top:24px;
 }
 
-.card
+.cardTop
 {
-    margin-top: 72px;
-    margin-left:16px;
-    width: 250px;
+    float:left;
+    margin-top: 112px;
+    margin-left:56px;
+    height:auto;
+    width: 9%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
+}
+
+.cardMiddle
+{
+    float:left;
+    margin-top: 18.5%;
+    margin-left: -9%;
+    height:20%;
+    width: 93%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.cardBottom
+{
+    float:left;
+    margin-top: 33%;
+    margin-left: -93%;
+    height:auto;
+    width: 9%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.cardMiddle2
+{
+    float:left;
+    margin-top: 45%;
+    margin-left: -93%;
+    height:20%;
+    width: 93%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.pokeImage
+{
+    width:100%;
+    height:auto;
 }

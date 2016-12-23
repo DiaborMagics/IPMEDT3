@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>ARENA</title>
+    <meta charset="UTF-8">
+	<link rel="icon" href="../assets/image/favicon.png">
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="assets/js/PokeAPI.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+
+      <a-assets>
+
+
+<!-- MIXINS -->
+
+<!-- MODELS -->
+
+        <!-- ARENA -->
+        <a-asset-item id="Arena-src" src="assets/Models/Arena.dae" timeout="1000"></a-asset-item>
+
+        <!-- POKEMON MODELS -->
+        <a-asset-item id="Typhlosion-src" src="assets/Models/157-Typhlosion/T.dae" timeout="1000"></a-asset-item>
+        <a-asset-item id="Lugia-src" src="assets/Models/249-Lugia/L.dae"timeout="1000"></a-asset-item>
+
+        <!-- MOVES -->
+        <a-asset-item id="lightning-src" src="assets/Models/lightning.dae"></a-asset-item>
+
+        <a-asset-item id="Fireblast-obj" src="assets/Models/Fireblast/Fireblast.obj"></a-asset-item>
+        <a-asset-item id="Fireblast-mtl" src="assets/Models/Fireblast/Fireblast.mtl"></a-asset-item>
+        <a-asset-item id="Fireblast-dae" src="assets/Models/Fireblast/FireBlast.dae"></a-asset-item>
+
+<!-- IMAGES -->
+
+        <!-- SKY -->
+        <img id="clouds" src="assets/img/clouds.jpeg">
+
+        <!-- UI -->
+        <img id="healthbar" src="assets/img/unnamed.png">
+        <img id="pokeball-image-src" src="assets/img/pokeball-hud.png">
+        <a-asset-item id="pokeball-src" src="assets/Models/Pokeball/pokeball.dae"></a-asset-item>
+
+        <!-- LOGO HS -->
+        <img id="HSLogo-src" src="assets/img/hslogo.png">
+
+        <!-- MOVES -->
+        <img id="Flamethrower-image-src" src="assets/img/Flamethrower.png">
+        <img id="FocusBlast-image-src" src="assets/img/focusblast.png">
+        <img id="Fireblast-image-src" src="assets/img/fireblast.png">
+        <img id="FlameWheel-image-src" src="assets/img/Flamewheel.png">
+        <img id="HiddenPower-image-src" src="assets/img/hiddenpower.png">
+
+        <!-- MENU IMAGES -->
+        <img id="sound-on-src" src="assets/img/music.png">
+        <img id="sound-off-src" src="assets/img/muted.png">
+        <img id="information-icon" src="assets/img/information.png">
+
+
+
+<!-- SOUNDS -->
+        <audio id="ThemeSong-src" src="assets/Music/battle-theme.mp3" preload="auto"></audio>
+        <audio id="Crowd-src" src="assets/Music/crowd.mp3" preload="auto"></audio>
+        <audio id="click-sound-src" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg" preload="auto"></audio>
+        <audio id="info-typhlosion" src="assets/Music/Typhlosion-eng.mp3" preload="auto"></audio>
+
+      </a-assets>
+
+<!-- CAMERA ->
+
+      <!--
+      Top view
+      pos 8.38 46.74 -40.07
+      rot 0 180 0
+
+      blue view
+      pos 46.15 9 2.42
+      rot 0 90 0
+      -->
+
+      <a-entity
+        id="camera"
+        position= "47.16 9 1.83"
+        rotation=  "0 90 0">
+
+        <a-camera>
+
+          <!-- CURSOR -->
+          <a-cursor color="white"></a-cursor>
+
+<!-- HUD ITEMS -->
+      <!-- HEALTH BAR LEFT -->
+          <a-image
+            id="healthbar-left"
+            src="#healthbar"
+            position="-2.1 1.45 -2"
+            scale="1.4 0.1 1"
+          ></a-image>
+
+      <!-- HEALTH BAR RIGHT -->
+          <a-image
+            id="healthbar-right"
+            src="#healthbar"
+            position="2.1 1.45 -2"
+            scale="1.4 0.1 1"
+          ></a-image>
+
+    <!-- POKEBALLS LEFTSIDE -->
+          <a-image
+            src="#pokeball-image-src"
+            position="-1.35 0.79 -1"
+            scale="0.05 0.05 0.05"
+          ></a-image>
+
+          <a-image
+            src="#pokeball-image-src"
+            position="-1.28 0.79 -1"
+            scale="0.05 0.05 0.05"
+          ></a-image>
+
+          <a-image
+            src="#pokeball-image-src"
+            position="-1.21 0.79 -1"
+            scale="0.05 0.05 0.05"
+          ></a-image>
+
+          <a-image
+            src="#pokeball-image-src"
+            position="-1.14 0.79 -1"
+            scale="0.05 0.05 0.05"
+          ></a-image>
+
+          <a-image
+            src="#pokeball-image-src"
+            position="-1.07 0.79 -1"
+            scale="0.05 0.05 0.05"
+          ></a-image>
+
+          <a-image
+            src="#pokeball-image-src"
+            position="-1.00 0.79 -1"
+            scale="0.05 0.05 0.05"
+          ></a-image>
+
+    <!-- POKEBALL RIGHTSIDE -->
+          <a-image
+            src="#pokeball-image-src"
+            position="1.10 0.79 -1"
+            scale="0.05 0.05 0.05"
+          ></a-image>
+
+          <a-image
+            src="#pokeball-image-src"
+            position="1.03 0.79 -1"
+            scale="0.05 0.05 0.05"
+          ></a-image>
+
+          <a-image
+            src="#pokeball-image-src"
+            position="0.96 0.79 -1"
+            scale="0.05 0.05 0.05"
+          ></a-image>
+
+          <a-image
+            src="#pokeball-image-src"
+            position="0.89 0.79 -1"
+            scale="0.05 0.05 0.05"
+          ></a-image>
+
+          <a-image
+            src="#pokeball-image-src"
+            position="0.82 0.79 -1"
+            scale="0.05 0.05 0.05"
+          ></a-image>
+
+          <a-image
+            src="#pokeball-image-src"
+            position="0.75 0.79 -1"
+            scale="0.05 0.05 0.05"
+          ></a-image>
+
+
+
+      <!-- SCENERY MUSIC AND SOUNDS -->
+
+          <a-sound
+            id="Battle-theme"
+            src="#ThemeSong-src"
+            autoplay="true"
+            volume="0.1"
+            loop="true"
+          ></a-sound>
+
+          <a-sound
+            id="Crowd"
+            src="#Crowd-src"
+            autoplay="true"
+            volume="0.2"
+            loop="true"
+          ></a-sound>
+
+        </a-camera>
+
+      </a-entity>
+
+
+
+<!--  SCENERY  -->
+      <a-sky
+        src="#clouds"
+      ></a-sky>
+
+      <a-entity
+        id="Arena"
+        position="0 0 0"
+        rotation="0 180 0 "
+        collada-model="#Arena-src"
+        scale="4 4 4"
+      ></a-entity>
+
+      <a-image
+        id="HSLogo"
+        src="#HSLogo-src"
+        position="6.60 34.03 -38.78"
+        rotation="0 0 0"
+        scale="11.05 11.05 15.00"
+      ></a-image>
+
+<!-- SOUNDS -->
+
+      <a-sound
+        id="click-sound"
+        src="#click-sound-src"
+        autoplay="false"
+        position="47.16 9 1.83"
+        volume="1"
+        on="click"
+      ></a-sound>
+
+      <a-sound
+        id="Typhlosion-info"
+        src="#info-typhlosion"
+        autoplay="false"
+        position="47.16 9 1.83"
+        volume="5"
+        on="Typhlosion-info"
+      ></a-sound>
+
+
+<!-- POKEMON INFO -->
+      <a-image
+        id="information-player-side"
+        data="157"
+        src="#information-icon"
+        position="48.72 11.78 6.08"
+        rotation="0 0 0"
+        scale="0.5 0.5 0.5"
+      ></a-image>
+
+      <a-entity
+        id = "name"
+        mixin="font"
+        text="text: Name:; color:white;"
+        position="48.98 11.09 6.08"
+        rotation="0 180 0"
+        scale="0.4 0.4 0.4"
+      ></a-entity>
+
+      <a-entity
+        id = "height"
+        mixin="font"
+        text="text: Height:; color:white;"
+        position="48.99 10.73 6.08"
+        rotation="0 180 0"
+        scale="0.4 0.4 0.4"
+      ></a-entity>
+
+      <a-entity
+        id = "weight"
+        mixin="font"
+        text="text: Weight:; color:white;"
+        position="49.02 10.37 6.09"
+        rotation="0 180 0"
+        scale="0.4 0.4 0.4"
+      ></a-entity>
+
+<!-- SOUND OPTIONS -->
+      <a-image
+        id="SoundOn"
+        src="#sound-on-src"
+        position="47.04 10.62 -1.47"
+        rotation="0 0 0"
+        scale="0.56 0.56 1"
+      ></a-image>
+
+      <a-image
+        id="SoundOff"
+        src="#sound-off-src"
+        position="47.95 10.60 -1.49"
+        rotation="0 0 0"
+        scale="0.56 0.56 1"
+      ></a-image>
+
+
+<!-- POKEMON MODELS -->
+      <a-entity id="Typhlosion">
+        <a-entity
+          position="36.41 6.34 1.93"
+          rotation="80.21 -91.10 0"
+          collada-model="#Typhlosion-src"
+          scale="0.15 0.15 0.15"
+          transparent = "false"
+          opacity="1"
+        ></a-entity>
+
+        <a-animation
+         attribute="position"
+         dur="1000"
+         from="2.5 0 0"
+         to="-2.5 0 0"
+         begin="Attack"
+         repeat="0"
+        ></a-animation>
+      </a-entity>
+
+      <a-entity
+        id="Lugia"
+        position="-0.65 8.58 2.21"
+        rotation="87.09 -104.85 164.44"
+        collada-model="#Lugia-src"
+        scale="0.15 0.15 0.15"
+        transparent= "false"
+      ></a-entity>
+
+<!-- MOVE CHOICE IMAGES -->
+
+      <a-image
+        id="Fireblast-Choice"
+        src="#Fireblast-image-src"
+        position="45.83 9.73 3.67"
+        rotation="-67.04 89.95 0"
+        scale="1.03 0.45 1"
+        opacity="0.9"
+        sound="src: url(#ThemeSong-src); on: mouseenter"
+      ></a-image>
+
+      <a-image
+        id="Flamethrower-Choice"
+        src="#Flamethrower-image-src"
+        position="45.84 9.73 2.52"
+        rotation="-67.04 89.95 0"
+        scale="1.03 0.45 1.00"
+        opacity="0.9"
+      ></a-image>
+
+      <a-image
+        id="HiddenPower-Choice"
+        src="#HiddenPower-image-src"
+        position="45.82 9.73 1.36"
+        rotation="-67.04 89.95 0"
+        scale="1.03 0.45 1"
+        opacity="0.9"
+      ></a-image>
+
+      <a-image
+        id="FlameWheel-Choice"
+        src="#FlameWheel-image-src"
+        position="45.83 9.73 0.19"
+        rotation="-67.04 89.95 0"
+        scale="1.03 0.45 1.00"
+        opacity="0.9"
+      ></a-image>
+
+<!-- MOVES MODELS AND ANITMATION -->
+
+  <!-- FIREBLAST -->
+      <a-entity id="Fireblast">
+
+        <a-entity
+          position="35.21 0.75 1.86"
+          rotation="-0.57 82.51 -0.57"
+          collada-model="#Fireblast-dae"
+          scale="1 1 1"
+        ></a-entity>
+
+        <a-animation
+         attribute="position"
+         dur="1500"
+         from="0 10 0"
+         to="-30 10 0"
+         begin="Fireblast"
+         repeat="0"
+         fill="backwards"
+        ></a-animation>
+
+        <a-sound
+          id="Fireblast-sound"
+          src="#click-sound-src"
+          autoplay="false"
+          position="47.16 9 1.83"
+          volume="2"
+          on="Fireblast"
+        ></a-sound>
+
+      </a-entity>
+
+    </a-scene>
+
+
+
+
+
+
+
+
+<!-- JAVASCRIPT -->
+    <script>
+
+      /* MOVES */
+      var FireblastChoice= document.querySelector('#Fireblast-Choice');
+      var FlameWheelChoice= document.querySelector('#FlameWheel-Choice');
+      var FlamethrowerChoice= document.querySelector('#Flamethrower-Choice');
+      var HiddenPowerChoice= document.querySelector('#HiddenPower-Choice');
+      var InformationPlayer= document.querySelector('#information-player-side');
+      var SoundOn= document.querySelector('#SoundOn');
+      var SoundOff= document.querySelector('#SoundOff');
+
+
+// POKEMON INFO SOUND
+      InformationPlayer.addEventListener("mouseenter", function()
+        {
+          document.querySelector('#Typhlosion-info').emit('Typhlosion-info');
+        });
+
+
+
+// MOVE FUNCTIONS
+      FireblastChoice.addEventListener("mouseenter", function()
+        {
+          FireblastChoice.setAttribute("scale","1.10 0.55 1.00");
+
+          FlamethrowerChoice.setAttribute("scale","1.03 0.45 1.00");
+          FlameWheelChoice.setAttribute("scale","1.03 0.45 1.00");
+          HiddenPowerChoice.setAttribute("scale","1.03 0.45 1.00");
+
+          document.querySelector('#Fireblast').emit('Fireblast');
+
+          document.querySelector('#click-sound').emit('click');
+
+          document.querySelector('#Typhlosion').emit('Attack');
+
+
+
+        });
+
+      FlamethrowerChoice.addEventListener("mouseenter", function()
+        {
+          FlamethrowerChoice.setAttribute("scale","1.10 0.55 1.00");
+
+          FireblastChoice.setAttribute("scale","1.03 0.45 1.00");
+          FlameWheelChoice.setAttribute("scale","1.03 0.45 1.00");
+          HiddenPowerChoice.setAttribute("scale","1.03 0.45 1.00");
+
+          document.querySelector('#click-sound').emit('click');
+
+        });
+
+      HiddenPowerChoice.addEventListener("mouseenter", function()
+        {
+          HiddenPowerChoice.setAttribute("scale","1.10 0.55 1.00");
+
+          FireblastChoice.setAttribute("scale","1.03 0.45 1.00");
+          FlameWheelChoice.setAttribute("scale","1.03 0.45 1.00");
+          FlamethrowerChoice.setAttribute("scale","1.03 0.45 1.00");
+
+          document.querySelector('#click-sound').emit('click');
+
+        });
+
+      FlameWheelChoice.addEventListener("mouseenter", function()
+        {
+          FlameWheelChoice.setAttribute("scale","1.10 0.55 1.00");
+
+          FireblastChoice.setAttribute("scale","1.03 0.45 1.00");
+          HiddenPowerChoice.setAttribute("scale","1.03 0.45 1.00");
+          FlamethrowerChoice.setAttribute("scale","1.03 0.45 1.00");
+
+          document.querySelector('#click-sound').emit('click');
+
+        });
+
+// SOUND FUNCTIONS
+      SoundOn.addEventListener("mouseenter", function()
+        {
+          $('#Battle-theme').attr('volume','0.1');
+          $('#Crowd').attr('volume','0.3');
+        });
+
+      SoundOff.addEventListener("mouseenter", function()
+        {
+          $('#Battle-theme').attr('volume','0');
+          $('#Crowd').attr('volume','0');
+        });
+
+
+
+    </script>
+  </body>
+</html>

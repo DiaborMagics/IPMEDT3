@@ -1,7 +1,8 @@
 window.onload = function()
 {
     document.getElementById('navIntroductionPage').style.color = '#d50000';
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    // document.body.scrollTop = document.documentElement.scrollTop = 0;
+    console.log('Page needs to be refreshed when switching between desktop and mobile width');
 }
 // $(window).resize(function()
 // {
@@ -14,23 +15,41 @@ window.onload = function()
 //     $("#introduction h1").css("left", (($("#introduction").width() - $("#introduction h1").width()) / 2));
 // }
 
-//functie om huidige pagina link in menu te highlighten en kleuren
-// $(function()
-// {
-//     $('a').each(function()
-//     {
-//         if ($(this).prop('href') == window.location.href)
-//         {
-//             $(this).addClass('huidig');
-//
-//         }
-//     });
-// });
-//
-// function reload()
-// {
-//     location.reload();
-// }
+if (screen.width < 801)
+{
+    function openMenu()
+    {
+        document.getElementById("mySidenav").style.width = "80%";
+        document.getElementById("filter").style.display = "block";
+    }
+
+    /* set 0 */
+    function closeMenu()
+    {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("filter").style.display = "none";
+
+    }
+}
+
+else if (screen.width > 800)
+{
+        function openMenu()
+    {
+        document.getElementById("mySidenav").style.width = "248px";
+    }
+
+    /* set 0 */
+    function closeMenu()
+    {
+        console.log('Desktop version; not closing');
+    }
+
+    //openMenu(); hier aanroepen voor DESKTOP VERSIE
+    openMenu();
+}
+
+
 
 function highlightIntro()
 {
